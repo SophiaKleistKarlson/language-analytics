@@ -16,8 +16,8 @@ python -m ipykernel install --user --name=$VENVNAME
 test -f requirements.txt && pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 
-# then this: 
-python3 keyword_headline_sentiment.py
+# then this: (in here, it would be src instead of folder below
+python3 folder/keyword_headline_sentiment.py
 
 #then deactivate
 deactivate
