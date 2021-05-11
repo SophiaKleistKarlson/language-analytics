@@ -6,6 +6,17 @@ import numpy as np
 import re # regex
 import string # regex
 
+# unzip the zipfile with the data
+# define path to the zip file
+zip_path = os.path.join("..", "assignment_2", "data") 
+
+# set working directory to the zip path
+os.chdir(zip_path)
+print(zip_path)
+
+# unzip the zipfile
+!unzip 'archive.zip'
+
 
 # define main function
 def main():
@@ -33,7 +44,7 @@ def main():
     keyword = "gender"
 
     # set data path
-    data_path = os.path.join("..", "data", "cenlab", "texts")
+    data_path = os.path.join("..", "assignment_2", "data", "cenlab", "texts")
 
     # prepare empty corpus list
     corpus = []
