@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #first set the working directory 
-#cd cds-language
+# cd 'your path'
 
 VENVNAME=collocation_environment
 
@@ -19,3 +19,7 @@ test -f requirements.txt && pip install -r requirements.txt
 #then deactivate the environment
 deactivate
 echo "build $VENVNAME"
+
+#!/usr/bin/env bash
+
+
