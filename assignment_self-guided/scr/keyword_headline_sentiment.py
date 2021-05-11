@@ -6,12 +6,23 @@ import spacy
 import matplotlib.pyplot as plt 
 from spacytextblob.spacytextblob import SpacyTextBlob 
 
+# unzip the zipfile with the data
+# define path to the zip file
+zip_path = os.path.join("..", "assignment_self-guided", "data") 
+
+# set working directory to the zip path
+os.chdir(zip_path)
+print(zip_path)
+
+# unzip the zipfile
+!unzip 'archive.zip'
+
 
 # initialize spaCy
 nlp = spacy.load("en_core_web_sm")
 
 # define path to csv
-path_to_csv = os.path.join("..", "data", "abcnews-date-text.csv")
+path_to_csv = os.path.join("..", "assignment_self-guided", "data", "abcnews-date-text.csv")
 
 # read the csv
 abc_news = pd.read_csv(path_to_csv)
