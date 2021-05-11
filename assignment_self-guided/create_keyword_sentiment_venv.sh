@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #first set the working directory 
-#cd cds-language/src
+# cd 'your path'
 
 VENVNAME=keyword_sentiment_environment
 
