@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#if in worker2, first set the working directory 
+#first set the working directory 
 #cd cds-language/src
 
 VENVNAME=keyword_sentiment_environment
