@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#first set the working directory 
+# cd 'your path'
+
 VENVNAME=network_venv
 
 python3 -m venv $VENVNAME
