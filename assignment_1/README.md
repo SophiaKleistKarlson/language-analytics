@@ -10,7 +10,7 @@ Calculate the total number of unique words for each novel
 
 Save result as a single file consisting of three columns: filename, total_words, unique_words
 
-General instructions
+**General instructions**
 
 For this exercise, you can upload either a standalone script OR a Jupyter Notebook
 
