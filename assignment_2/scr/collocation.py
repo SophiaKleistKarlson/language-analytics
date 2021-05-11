@@ -6,9 +6,6 @@ import numpy as np
 import re # regex
 import string # regex
 
-### I USED THE TEXTS FROM THE CENLAB FOLDER (EXCLUDED THE "1887_she.txt")
-
-
 
 # define main function
 def main():
