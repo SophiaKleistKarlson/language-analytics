@@ -1,4 +1,6 @@
-pandas == 1.1.5
-spacy == 2.3.5
 networkx == 2.5
 matplotlib == 3.3.4
+pathlib == 1.0.1
+pandas == 1.1.5
+spacy == 2.3.5
+tqdm == 4.58.0
