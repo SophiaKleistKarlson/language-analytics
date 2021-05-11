@@ -34,6 +34,19 @@ import matplotlib.pyplot as plt
 plt.rcParams["figure.figsize"] = (20,20)
 
 
+# unzip the zipfile with the images
+# define path to the zip file
+zip_path = os.path.join("..", "assignment_4", "data") 
+
+# set working directory to the zip path
+os.chdir(zip_path)
+print(zip_path)
+
+# unzip the zipfile
+!unzip 'fake_or_real_news.zip'
+    
+    
+
 def main():
     
     ### Initial stuff with pathes ###
