@@ -1,4 +1,3 @@
-import numpy as np
 from collections import Counter 
 import os
 from pathlib import Path
@@ -7,9 +6,6 @@ import numpy as np
 import re # regex
 import string # regex
 
-
-
-### I DIDN'T HAVE TIME TO MAKE A REQUIREMENTS TXT
 ### I USED THE TEXTS FROM THE CENLAB FOLDER (EXCLUDED THE "1887_she.txt")
 
 
