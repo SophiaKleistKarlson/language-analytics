@@ -51,9 +51,13 @@ def main():
 
     # print the word count list
     print(DATA)
+    
+    # create directory called out, if it doesn't exist
+    if not os.path.exists("out"):
+        os.mkdir("out")
 
-    # make outpath to show where to save the data and what to call the csv (I manually made a folder in the data folder called "homework_output")
-    outpath = os.path.join("..", "data", "homework_output", "word_counts.csv")
+    # make outpath to show where to save the data and what to call the csv
+    outpath = os.path.join("..", "data", "out", "word_counts.csv")
 
     # save the DATA panda as a csv file
     DATA.to_csv(outpath)   
