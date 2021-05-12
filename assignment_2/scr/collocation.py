@@ -6,21 +6,11 @@ import numpy as np
 import re # regex
 import string # regex
 
-# unzip the zipfile with the data
-# define path to the zip file
-zip_path = os.path.join("..", "assignment_2", "data") 
-
-# set working directory to the zip path
-os.chdir(zip_path)
-print(zip_path)
-
-# unzip the zipfile
-!unzip 'archive.zip'
-
 
 # define main function
 def main():
     
+    #### prepare functions, empty dataframe, keyword etc. #### 
     # prepare regex tokenizer for splitting strings
     def tokenize(input_string):
 
@@ -33,36 +23,7 @@ def main():
         # return the token list
         return token_list
 
-
-    # prepare panda to write logs
-    columns = ['collocate', 'raw_frequency', 'MI']
-    index = np.arange(0)
-    DATA = pd.DataFrame(columns=columns, index = index)
-
-
-    # define keyword
-    keyword = "gender"
-
-    # set data path
-    data_path = os.path.join("..", "assignment_2", "data", "cenlab", "texts")
-
-    # prepare empty corpus list
-    corpus = []
-
-
-
-    # make for loop that reads the texts
-    for filename in Path(data_path).glob("*.txt"):
-        with open(filename, "r", encoding="utf-8") as file:
-
-            loaded_text = file.read() # load texts
-            corpus.append(loaded_text)
-
-    # flatten the corpus so we get one list instead of a list of lists
-    flattened_corpus = [val for sublist in corpus for val in sublist]
-
-
-
+    
     # prepare kwic function - I put the default window size to 5 (words)
     def kwic(text, keyword, window_size=5):  
 
@@ -92,6 +53,33 @@ def main():
 
         # return the tokenized list of concordance lines
         return concordance_lines_kwic
+    
+
+    # prepare panda to write logs
+    columns = ['collocate', 'raw_frequency', 'MI']
+    index = np.arange(0)
+    DATA = pd.DataFrame(columns=columns, index = index) 
+    
+    # define keyword
+    keyword = "gender"
+
+    # set data path
+    data_path = os.path.join("..", "assignment_2", "data", "cenlab", "texts")
+
+    # prepare empty corpus list
+    corpus = []
+
+    
+    #### read data and get concordances ###
+    # make for loop that reads the texts
+    for filename in Path(data_path).glob("*.txt"):
+        with open(filename, "r", encoding="utf-8") as file:
+
+            loaded_text = file.read() # load texts
+            corpus.append(loaded_text)
+
+    # flatten the corpus so we get one list instead of a list of lists
+    flattened_corpus = [val for sublist in corpus for val in sublist]
 
 
     # prepare empty concordance_lines list
@@ -124,7 +112,6 @@ def main():
 
     #print(collocates)
     #print(type(collocates))
-
 
 
     # now tokenize the corpus: 
